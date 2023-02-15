@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Auto-Ratata</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/custom.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #060606;
+		}
+		form {
+			max-width: 600px;
+			margin: 0 auto;
+			background-color: #fff;
+			padding: 20px;
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+		}
+		h1 {
+			text-align: center;
+			color: aqua;
+			box-sizing: border-box;
+			border-color: aliceblue;
+			box-shadow: #fff;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		input[type="text"], input[type="number"], textarea {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+			font-size: 16px;
+		}
+		button {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+			margin-right: 10px;
+		}
+		.cancel-button {
+			background-color: #f44336;
+		}
+		.order{
+			margin: 0 auto;
+			align-items: end;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="header" id="topheader">
+		<nav class="navbar navbar-expand-lg fixed-centre">
+		  <div class="container text text-uppercase  p-1">
+			<a class="navbar-brand font-weight-bold text-white" href="#">AutoGarage</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			</div>
+			<ul class="navbar-nav ml-auto text-uppercase">
+			  <li class="nav-item active">
+				<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="Gwagon.htm">Gwagon</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="must.htm">Mustang</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="thar.htm">Thar</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="fortun.htm">Fortuner</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="order.htm">Order</a>
+			  </li>
+		  </div>
+		</nav>
+
+	<h1 class="text-uppercase">Order Management</h1>
+
+	<!-- Create Order Form -->
+	<form id="create-form">
+		<h2>Create Order</h2>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+		
+		<label for="email">Email:</label>
+		<input type="text" id="email" name="email" required>
+		
+		<label for="address">Address:</label>
+		<textarea id="address" name="address" rows="4" required></textarea>
+		
+		<label for="product">Product:</label>
+		<input type="text" id="product" name="product" required>
+		
+		<label for="quantity">Quantity:</label>
+		<input type="number" id="quantity" name="quantity" min="1" max="100" required>
+		
+		<button type="submit">Create Order</button>
+		<output>Your order has been created check your mail</output>
+	</form>
+
+	<hr>
+
+	<!-- Change Order Form -->
+	<form id="change-form">
+		<h2>Change Order</h2>
+		<label for="change-id">Order ID:</label>
+		<input type="number" id="change-id" name="change-id" min="1" required>
+		
+		<label for="new-name">New Name:</label>
+		<input type="text" id="new-name" name="new-name">
+		
+		<label for="new-email">New Email:</label>
+		<input type="text" id="new-email" name="new-email">
+		
+		<label for="new-address">New Address:</label>
+		<textarea id="new-address" name="new-address" rows="4"></textarea>
+		
+		<label for="new-product">New Product:</label>
+		<input type="text" id="new-product" name="new-product">
+		
+		<label for="new-quantity">New Quantity:</label>
+		<input type="text" id="new-quantity" name="new-quantity">
+    </form>
+</hr>
+</body>
+</html>
